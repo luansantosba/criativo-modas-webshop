@@ -17,12 +17,12 @@ const ProductList: React.FC<ProductListProps> = ({
   title = "Produtos",
 }) => {
   return (
-    <div className="py-8" id="products">
-      <h2 className="text-2xl font-bold mb-6 text-center">{title}</h2>
+    <div className="py-6 md:py-8" id="products">
+      <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center">{title}</h2>
       {products.length === 0 ? (
         <p className="text-center text-gray-500">Nenhum produto encontrado</p>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6">
           {products.map((product) => (
             <ProductCard
               key={product.id}

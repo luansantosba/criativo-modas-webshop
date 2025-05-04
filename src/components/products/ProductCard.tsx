@@ -24,27 +24,27 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 product-card w-full">
-      <div className="h-48 md:h-56 overflow-hidden">
+      <div className="h-36 sm:h-48 md:h-56 overflow-hidden">
         <img
           src={mainImage}
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
       </div>
-      <div className="p-3 md:p-4">
-        <h3 className="font-semibold text-base md:text-lg mb-1 truncate">{product.name}</h3>
+      <div className="p-2 md:p-4">
+        <h3 className="font-semibold text-sm md:text-lg mb-1 truncate">{product.name}</h3>
         <p className="text-criativo-primary font-bold mb-1 md:mb-2">{formattedPrice}</p>
-        <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4 line-clamp-2">
+        <p className="text-xs md:text-sm text-gray-600 mb-2 md:mb-4 line-clamp-2">
           {product.shortDescription}
         </p>
         <div className="flex flex-col space-y-2">
           <Button
             onClick={() => onAddToCart(product)}
-            className="w-full text-xs bg-criativo-primary hover:bg-criativo-dark-gray"
+            className="w-full bg-criativo-primary hover:bg-criativo-dark-gray"
             size="sm"
           >
-            <ShoppingCart size={14} className="mr-1" />
-            <span className="truncate">Adicionar ao Carrinho</span>
+            <ShoppingCart size={14} className="mr-1 flex-shrink-0" />
+            <span className="text-xs whitespace-nowrap">Adicionar ao Carrinho</span>
           </Button>
           <Button
             variant="outline"

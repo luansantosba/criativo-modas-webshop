@@ -36,6 +36,10 @@
     --radius: 0.5rem;
   }
 
+  html, body {
+    @apply overscroll-none overflow-x-hidden touch-manipulation max-w-[100vw];
+  }
+
   * {
     @apply border-border;
   }
@@ -43,12 +47,13 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
