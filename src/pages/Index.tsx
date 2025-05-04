@@ -16,7 +16,7 @@ import {
   searchProducts,
 } from "@/lib/products";
 import { Product, CartItem, Category, Color, Size } from "@/lib/types";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   // State for products and filtering

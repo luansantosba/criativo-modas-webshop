@@ -3,7 +3,7 @@ export type Gender = "male" | "female" | "unisex";
 
 export type Category = "blusa" | "vestido" | "calca" | "short";
 
-export type Size = "PP" | "P" | "M" | "G" | "GG" | "XG";
+export type Size = "PP" | "P" | "M" | "G" | "GG" | "XG" | "36" | "38" | "40" | "42" | "44" | "46";
 
 export type Color = {
   name: string;
