@@ -17,7 +17,7 @@ const ProductList: React.FC<ProductListProps> = ({
   title = "Produtos",
 }) => {
   return (
-    <div className="py-6 md:py-8" id="products">
+    <div className="py-4 md:py-8 w-full px-2 md:px-0" id="products">
       <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-center">{title}</h2>
       {products.length === 0 ? (
         <p className="text-center text-gray-500">Nenhum produto encontrado</p>

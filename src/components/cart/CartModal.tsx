@@ -243,7 +243,7 @@ const CartModal: React.FC<CartModalProps> = ({
                   </div>
                 </div>
 
-                <SheetFooter className="mt-6">
+                <SheetFooter className="mt-6 pb-6 px-4 sm:px-0">
                   <Button 
                     onClick={() => setStep("shipping")}
                     disabled={!canProceedToShipping}
@@ -279,7 +279,7 @@ const CartModal: React.FC<CartModalProps> = ({
                       setAddress({ ...address, zipCode: e.target.value })
                     }
                   />
-                  <Button onClick={handleZipCodeLookup} variant="outline">
+                  <Button onClick={handleZipCodeLookup} variant="outline" size="sm">
                     Buscar
                   </Button>
                 </div>
@@ -419,11 +419,11 @@ const CartModal: React.FC<CartModalProps> = ({
               </div>
             </div>
 
-            <SheetFooter className="mt-6 space-y-2">
+            <SheetFooter className="mt-6 space-y-2 pb-6 px-4 sm:px-0">
               <Button
                 onClick={() => setStep("payment")}
                 disabled={!canProceedToPayment}
-                className="w-full"
+                className="w-full mb-2"
               >
                 Continuar para pagamento
               </Button>
@@ -445,7 +445,7 @@ const CartModal: React.FC<CartModalProps> = ({
               <SheetTitle>Método de Pagamento</SheetTitle>
             </SheetHeader>
 
-            <div className="space-y-6">
+            <div className="space-y-6 overflow-y-auto pb-2">
               <RadioGroup
                 value={paymentMethod}
                 onValueChange={(value: PaymentMethod) => setPaymentMethod(value)}
@@ -546,8 +546,8 @@ const CartModal: React.FC<CartModalProps> = ({
               </div>
             </div>
 
-            <SheetFooter className="mt-6 space-y-2">
-              <Button onClick={handleCheckout} className="w-full">
+            <SheetFooter className="mt-4 space-y-2 pb-6 px-4 sm:px-0">
+              <Button onClick={handleCheckout} className="w-full mb-2">
                 Finalizar Compra
               </Button>
               <Button
@@ -569,7 +569,7 @@ const CartModal: React.FC<CartModalProps> = ({
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent className="w-full sm:max-w-md flex flex-col">
+      <SheetContent className="w-full sm:max-w-md flex flex-col overflow-y-auto">
         {renderStepContent()}
       </SheetContent>
     </Sheet>
