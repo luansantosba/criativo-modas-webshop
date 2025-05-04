@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				criativo: {
+					primary: '#000000',
+					secondary: '#FFFFFF',
+					accent: '#F5F5F5',
+					gray: '#888888',
+					'dark-gray': '#333333',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +82,17 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'carousel': {
+					'0%, 100%': { transform: 'translateX(0)' },
+					'33%': { transform: 'translateX(-100%)' },
+					'66%': { transform: 'translateX(-200%)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'carousel': 'carousel 15s infinite'
 			}
 		}
 	},
