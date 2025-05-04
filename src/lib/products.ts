@@ -50,7 +50,7 @@ export const categories: CategoryCircle[] = [
     id: 2,
     name: "Vestidos",
     category: "vestido",
-    imageUrl: "https://images.unsplash.com/photo-1596783074569-1ed912cfa4e5?q=80&w=300&h=300&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=300&h=300&auto=format&fit=crop",
   },
   {
     id: 3,

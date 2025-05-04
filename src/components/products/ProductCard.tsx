@@ -40,16 +40,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="flex flex-col space-y-2">
           <Button
             onClick={() => onAddToCart(product)}
-            className="w-full text-xs sm:text-sm md:text-base bg-criativo-primary hover:bg-criativo-dark-gray"
+            className="w-full text-xs bg-criativo-primary hover:bg-criativo-dark-gray"
             size="sm"
           >
-            <ShoppingCart size={16} className="mr-1 md:mr-2" />
-            <span className="whitespace-nowrap">Adicionar ao Carrinho</span>
+            <ShoppingCart size={14} className="mr-1" />
+            <span className="truncate">Adicionar ao Carrinho</span>
           </Button>
           <Button
             variant="outline"
             onClick={() => onViewDetails(product)}
-            className="w-full text-xs sm:text-sm md:text-base border-criativo-primary text-criativo-primary hover:bg-criativo-accent"
+            className="w-full text-xs border-criativo-primary text-criativo-primary hover:bg-criativo-accent"
             size="sm"
           >
             Saiba mais
