@@ -23,7 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   });
 
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 product-card">
+    <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 product-card w-full">
       <div className="h-48 md:h-56 overflow-hidden">
         <img
           src={mainImage}
@@ -31,24 +31,26 @@ const ProductCard: React.FC<ProductCardProps> = ({
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
       </div>
-      <div className="p-4">
-        <h3 className="font-semibold text-lg mb-1 truncate">{product.name}</h3>
-        <p className="text-criativo-primary font-bold mb-2">{formattedPrice}</p>
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+      <div className="p-3 md:p-4">
+        <h3 className="font-semibold text-base md:text-lg mb-1 truncate">{product.name}</h3>
+        <p className="text-criativo-primary font-bold mb-1 md:mb-2">{formattedPrice}</p>
+        <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4 line-clamp-2">
           {product.shortDescription}
         </p>
-        <div className="space-y-2">
+        <div className="flex flex-col space-y-2">
           <Button
             onClick={() => onAddToCart(product)}
-            className="w-full bg-criativo-primary hover:bg-criativo-dark-gray"
+            className="w-full text-xs sm:text-sm md:text-base bg-criativo-primary hover:bg-criativo-dark-gray"
+            size="sm"
           >
-            <ShoppingCart size={16} className="mr-2" />
-            Adicionar ao Carrinho
+            <ShoppingCart size={16} className="mr-1 md:mr-2" />
+            <span className="whitespace-nowrap">Adicionar ao Carrinho</span>
           </Button>
           <Button
             variant="outline"
             onClick={() => onViewDetails(product)}
-            className="w-full border-criativo-primary text-criativo-primary hover:bg-criativo-accent"
+            className="w-full text-xs sm:text-sm md:text-base border-criativo-primary text-criativo-primary hover:bg-criativo-accent"
+            size="sm"
           >
             Saiba mais
           </Button>
