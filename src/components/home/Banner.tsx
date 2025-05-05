@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Banner as BannerType } from "@/lib/types";
 
 interface BannerProps {
@@ -19,16 +18,6 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
 
     return () => clearInterval(intervalId);
   }, [banners.length]);
-
-  const goToNext = () => {
-    setActiveIndex((current) => (current + 1) % banners.length);
-  };
-
-  const goToPrevious = () => {
-    setActiveIndex((current) =>
-      current === 0 ? banners.length - 1 : current - 1
-    );
-  };
 
   return (
     <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
@@ -67,25 +56,6 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
           </div>
         ))}
       </div>
-
-      {/* Navigation arrows */}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full"
-        onClick={goToPrevious}
-      >
-        <ArrowLeft className="h-6 w-6" />
-      </Button>
-
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 rounded-full"
-        onClick={goToNext}
-      >
-        <ArrowRight className="h-6 w-6" />
-      </Button>
 
       {/* Dots indicator */}
       <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
